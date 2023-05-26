@@ -45,6 +45,10 @@ function Child({ studentList, onStudentDelete, onAddNewStudent }) {
     }
 
     onAddNewStudent(newStudent)
+
+    setName('')
+    setGender('')
+    setAge('')
   }
 
   return (
@@ -56,14 +60,20 @@ function Child({ studentList, onStudentDelete, onAddNewStudent }) {
       <br />
 
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Name </label>
         <input type="text" name='name' value={name} onChange={handleInput} required/>
         <br />
-        <label htmlFor="gender">Gender</label>
-        <input type="text" name='gender' value={gender} onChange={handleInput} required/>
+        <label htmlFor="gender">Gender </label>
+        <select name="gender" value={gender}  onChange={handleInput} id="gender">
+          <option value="">Please choose an option</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Unknown">Unknown</option>
+        </select>
+
         <br />
-        <label htmlFor="age">Age</label>
-        <input type="text" name='age' value={age} onChange={handleInput} required/>
+        <label htmlFor="age">Age </label>
+        <input type="number" name='age' value={age} onChange={handleInput} required/>
         <br />
         <input type="submit" value="Add new student" />
       </form>
