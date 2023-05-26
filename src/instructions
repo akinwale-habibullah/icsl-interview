@@ -1,0 +1,15 @@
+2 components
+  - parent
+    Model data - an array of objects - stateObject
+    event handler 
+      - delete clicked student
+      - add new student to array
+     
+  - child - props
+    - Make changes to the data
+
+  - push to github and deploy to heroku
+    - vercel or github pages
+
+- Email:
+hrdesk@icsoutsourcing.com
